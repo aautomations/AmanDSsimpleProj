@@ -18,7 +18,7 @@ public class POMYourAccount extends BaseAmazonClass {
 	//Your Account module
 	@FindBy(css="#nav-al-your-account > a:nth-child(2) > span") WebElement YourAccount;
 	
-	//Your Orders module
+	//Your Orders module55
 	@FindBy(css="#a-page > div.a-container > div > div:nth-child(2) > div:nth-child(1) > a > div > div > div > div.a-column.a-span9.a-span-last > div > span") WebElement YourOrders;
 	@FindBy(css="#a-page > section > div > div.a-section.a-spacing-medium.page-tabs > ul > li:nth-child(2) > a") WebElement BuyAgain;
 	@FindBy(css="#a-page > section > div > div.a-section.a-spacing-medium.page-tabs > ul > li:nth-child(3) > a") WebElement NotYetShipped;
@@ -49,16 +49,16 @@ public class POMYourAccount extends BaseAmazonClass {
 	
 	//Your Payments
 	@FindBy(css="#a-page > div.a-container > div > div:nth-child(3) > div:nth-child(2) > a > div > div > div > div.a-column.a-span9.a-span-last > h2") WebElement YourPayments;
-	@FindBy(xpath="//*[@id=\"pp-Skb4pq-14\"]/span/input") WebElement AddPayMethod;
-	@FindBy(css="#pp-6pBs11-26 > span > input") WebElement AddCard;
-	@FindBy(id="pp-Wcv5Kz-16") WebElement CardNmbr;
-	@FindBy(id="pp-Wcv5Kz-18") WebElement NameOnCard;
-	@FindBy(css="#pp-Wcv5Kz-22 > span > span > span") WebElement ExpMonth;
-	@FindBy(id="pp-Wcv5Kz-19_4") WebElement SelectMonth;
-	@FindBy(css="#pp-Wcv5Kz-23 > span > span") WebElement ExpYear;
-	@FindBy(id="pp-Wcv5Kz-21_1") WebElement SelectYear;
-	@FindBy(id="pp-Wcv5Kz-25") WebElement SecrCode;
-	@FindBy(css="#pp-Wcv5Kz-31 > span > input") WebElement AddYourCard;
+	@FindBy(xpath="//a[text()='Add a payment method']") WebElement AddPayMethod;
+	@FindBy(xpath="//input[@class='a-button-input']") WebElement AddCard;
+	@FindBy(xpath="//div[@class='a-column a-span9']") WebElement CardNmbr;
+	@FindBy(xpath="//input[@class='a-input-text a-form-normal apx-add-credit-card-account-holder-name-input mcx-input-fields']") WebElement NameOnCard;
+	@FindBy(xpath="//span[@class='a-button-text a-declarative']") WebElement ExpMonth;
+	@FindBy(xpath="//input[@class='a-button-input']") WebElement SelectMonth;
+	@FindBy(xpath="//span[@class='a-button-text a-declarative']") WebElement ExpYear;
+	@FindBy(xpath="//input[@class='a-button-input']") WebElement SelectYear;
+	@FindBy(xpath="//input[@class='a-input-text a-form-normal a-width-small']") WebElement SecrCode;
+	@FindBy(xpath="//input[@class='a-button-input']") WebElement AddYourCard;
 	
 	
 	
@@ -70,37 +70,35 @@ public class POMYourAccount extends BaseAmazonClass {
 	public void youraccount() throws InterruptedException {
 		Actions action= new Actions(driver);
 		action.moveToElement(driver.findElement(By.id("nav-link-accountList-nav-line-1"))).build().perform();
-		/*
-		 * String title =
-		 * driver.findElement(By.id("nav-link-accountList-nav-line-1")).getText();
-		 * System.out.println(title + " - Welcome Message displayed");
-		 */
-		YourAccount.click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
+		YourAccount.click(); 
+		Thread.sleep(1000);
+		 
 			
 	}
-	public void yourorders() throws InterruptedException {
+	public void YourOrders() throws InterruptedException {
 		YourOrders.click();
+		System.out.println("Was able to navigate to Your Orders module.");
 		Thread.sleep(2000);
 	}
 	
 	public void buyagain() {
 		boolean buyag = BuyAgain.isDisplayed();
-		System.out.println(buyag);
+		System.out.println("Buy Again - option displayed: " + buyag);
 		BuyAgain.click();
 	}
 	public void notyetshipped() throws InterruptedException {
 		driver.navigate().back();
 		Thread.sleep(1000);
 		boolean nys = NotYetShipped.isDisplayed();
-		System.out.println(nys);
+		System.out.println("Not Yet Shipped - option displayed: " + nys);
 		NotYetShipped.click();
 	}
 	public void cancelledorders() throws InterruptedException {
 		driver.navigate().back();
 		Thread.sleep(2000);
 		boolean cancelled = CancelledOrders.isDisplayed();
-		System.out.println(cancelled);
+		System.out.println("Cancelled Orders - option displayed: " + cancelled);
 		CancelledOrders.click();
 		Thread.sleep(2000);
 		driver.navigate().back();
@@ -108,6 +106,7 @@ public class POMYourAccount extends BaseAmazonClass {
 	public void youraddresses() throws InterruptedException {
 		YourAddresses.click();
 		Thread.sleep(1500);
+		System.out.println("Was able to navigate to Your Addresses module.");
 		AddAddress.click();
 		Thread.sleep(1500);		
 		CountryRegion.click(); 
@@ -157,51 +156,52 @@ public class POMYourAccount extends BaseAmazonClass {
 		Thread.sleep(1500);
 		DeliveryInstructions.click();
 		Thread.sleep(1500);
+		System.out.println("Was able to add delivery instructions.");
 		AddAddressLast.click();
 		Thread.sleep(1500);
+		System.out.println("Was able to add address successfully and make it default address.");
 	}
 		
 	public void loginsecurity() throws InterruptedException {
 		LoginSecurity.click();
 		Thread.sleep(1000);
+		System.out.println("Was able to navigate to Login and Security module.");
 		driver.navigate().back();
 		Thread.sleep(1000);				
 	}
 	
 	public void yourpayments() throws InterruptedException {
+		Thread.sleep(1000);
 		YourPayments.click();
 		Thread.sleep(1000);
-		WebElement frame= driver.findElement(By.id("pp-Skb4pq-14"));
-		driver.switchTo().frame(frame);
+		System.out.println("Was able to navigate to Your Payments module.");
 		AddPayMethod.click();
-		SoftAssert chk = new SoftAssert();
-		chk.assertAll();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		AddCard.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 	}
 	public void addcardnumber(String cnumber) throws InterruptedException {
 		CardNmbr.sendKeys(cnumber);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 	public void addnameoncard(String cname) throws InterruptedException {
 		NameOnCard.sendKeys(cname);
-		Thread.sleep(1000);				
+		Thread.sleep(3000);				
 	}
 	public void expdate() throws InterruptedException {
 		ExpMonth.click();
-		Thread.sleep(1000);	
+		Thread.sleep(2000);	
 		SelectMonth.click();
 		Thread.sleep(1000);	
 		ExpYear.click();
-		Thread.sleep(1000);	
+		Thread.sleep(2000);	
 		SelectYear.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		SecrCode.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		AddYourCard.click();
-		Thread.sleep(1000);
-		
+		Thread.sleep(2000);
+		System.out.println("Was able to add payment method successfully.");
 	}
 	
 	

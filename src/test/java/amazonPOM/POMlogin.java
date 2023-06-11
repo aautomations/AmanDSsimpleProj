@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.asserts.SoftAssert;
 
 import AmazonBaseP.BaseAmazonClass;
 import timeUtil.Timeutil;
@@ -27,11 +28,13 @@ public class POMlogin extends BaseAmazonClass {
 	}
 	
 	public void typeEmail(String email) throws InterruptedException {
+		driver.manage().timeouts().pageLoadTimeout(Timeutil.timepage, TimeUnit.SECONDS);
 		Actions action= new Actions(driver);
 		action.moveToElement(driver.findElement(By.id("nav-link-accountList"))).build().perform();
 		driver.findElement(By.cssSelector("#nav-flyout-ya-signin > a > span")).click();
-		driver.manage().timeouts().pageLoadTimeout(Timeutil.timepage, TimeUnit.SECONDS);
+		
 		Email.sendKeys(email);
+		System.out.println("Email was enetered correctly.");
 		Thread.sleep(1000);
 		Continue.click();
 		Thread.sleep(1000);
@@ -40,22 +43,23 @@ public class POMlogin extends BaseAmazonClass {
 	
 	public void typePassword(String password) throws InterruptedException {
 		Password.sendKeys(password);
+		System.out.println("Password was enetered correctly.");
 		Thread.sleep(1000);
 		Checkbox.click();
+		boolean keepsignedin = Checkbox.isSelected();
+		System.out.println("Keep me signed in - check box was selected:" + keepsignedin);
 		Thread.sleep(1000);
 		SignIn.click();
 		Thread.sleep(1000);
-		Actions action= new Actions(driver);
-		action.moveToElement(driver.findElement(By.id("nav-link-accountList-nav-line-1"))).build().perform();
-		String title = driver.findElement(By.id("nav-link-accountList-nav-line-1")).getText();
-		System.out.println(title + " - Welcome Message displayed");
-		/*
-		 * Actions action= new Actions(driver);
-		 * action.moveToElement(driver.findElement(By.id("nav-link-accountList"))).build
-		 * ().perform(); boolean result =
-		 * driver.findElement(By.linkText("nav-link-accountList-nav-line-1")).
-		 * isDisplayed(); System.out.println(result);
-		 */
+		
+		  Actions action= new Actions(driver);
+		  action.moveToElement(driver.findElement(By.id(
+		  "nav-link-accountList-nav-line-1"))).build().perform(); 
+		  String title =driver.findElement(By.id("nav-link-accountList-nav-line-1")).getText();
+		  System.out.println(title + " - Welcome Message was displayed");
+		  Thread.sleep(1000);
+		 
+		
 	}
 	public void logout() throws InterruptedException {
 		Actions action= new Actions(driver);

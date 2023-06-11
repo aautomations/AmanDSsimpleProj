@@ -5,9 +5,10 @@
     <classes>
       <class name="testLayerAmzn.TestlayerAmazon">
         <methods>
-          <include name="yrpayment"/>
-          <include name="enteremail"/>
+          <include name="ShoppingCart"/>
           <include name="initialsetup"/>
+          <include name="enteremail"/>
+          <include name="Search"/>
           <include name="close"/>
           <include name="yraccount"/>
         </methods>

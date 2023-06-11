@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import AmazonBaseP.BaseAmazonClass;
 import amazonPOM.POMSearchFacility;
+import amazonPOM.POMShoppingCart;
 import amazonPOM.POMYourAccount;
 import amazonPOM.POMlogin;
 
@@ -18,6 +19,8 @@ public class TestlayerAmazon extends BaseAmazonClass{
 
 	POMlogin log;
 	POMYourAccount logg;
+	POMSearchFacility word;
+	POMShoppingCart cart;
 	Assert check;
 	public TestlayerAmazon () {
 		super();
@@ -34,15 +37,15 @@ public class TestlayerAmazon extends BaseAmazonClass{
 		log.typePassword("toMT0m!5");
 	}
 	
-  @BeforeMethod 
-  	public void yraccount() throws InterruptedException {
-	  POMYourAccount logg = new POMYourAccount(); 
-	  logg.youraccount(); }
+	
+	  @BeforeMethod public void yraccount() throws InterruptedException {
+	  POMYourAccount logg = new POMYourAccount(); logg.youraccount(); }
 	 
-	@Test(priority=1, groups="Your Account", enabled=false)
-	public void yourorders() throws InterruptedException {
+	 
+	@Test(priority=1, groups="Your Account", enabled=true)
+	public void YourOrders() throws InterruptedException {
 		logg = new POMYourAccount();
-		logg.yourorders();
+		logg.YourOrders();
 		Thread.sleep(2000);
 		logg.buyagain();
 		Thread.sleep(2000);
@@ -50,8 +53,8 @@ public class TestlayerAmazon extends BaseAmazonClass{
 		Thread.sleep(2000);
 		logg.cancelledorders();
 	}
-	@Test(priority=2,groups="Your Account", enabled=false)
-	public void youradress() throws InterruptedException {
+	@Test(priority=2,groups="Your Account", enabled=true)
+	public void YourAddresses() throws InterruptedException {
 		logg = new POMYourAccount();
 		logg.youraddresses();
 		logg.fullname("Romy");
@@ -64,29 +67,51 @@ public class TestlayerAmazon extends BaseAmazonClass{
 		logg.otheropts();		
 		
 	}
-	@Test(priority=3, groups="Your Account", enabled= false)
-	public void loginsec() throws InterruptedException {
+	@Test(priority=3, groups="Your Account", enabled= true)
+	public void LoginSecurity() throws InterruptedException {
 		logg = new POMYourAccount();
 		logg.loginsecurity();
 		
 	}
-	@Test(priority=4,groups="Your Account", enabled=true)
-	public void yrpayment() throws InterruptedException {
+	@Test(priority=4,groups="Your Account", enabled=false)
+	public void YourPayments() throws InterruptedException {
 		logg = new POMYourAccount();
 		logg.yourpayments();
 		logg.addcardnumber("5555555555554444");
-		logg.addnameoncard("A");
+		logg.addnameoncard("Amanda");
 		logg.expdate();
 	}
-	@Test(priority=5, enabled= false)
-	public void searchh() throws InterruptedException {
-		POMSearchFacility word= new POMSearchFacility();
-		word.searchbyKeyword("mobile");
+	@Test(priority=5, enabled= true)
+	public void Search() throws InterruptedException {
+		word= new POMSearchFacility();
+		word.searchbyKeyword("mobile phone");
+		word.filter();
+		word.sort();
+		word.searchbyKeyword("mobile phone");
+		word.relevantproducts();
+		
 		
 	}
 	
-	
-	
+	@Test(priority=6, enabled= true)
+	public void ShoppingCart() throws InterruptedException {
+		
+		  word= new POMSearchFacility(); 
+		  word.searchbyKeyword("mobile phone");
+		 
+		cart = new POMShoppingCart();
+		cart.shopcart();
+		cart.checkout();
+		cart.removecloseopen();
+		startup();
+		log= new POMlogin();
+		log.typeEmail("amandeepsingh10145@gmail.com");
+		log.typePassword("toMT0m!5");
+		cart.opencart();
+		
+		
+	}
+		
 	
 	@AfterTest
 	public void close() throws InterruptedException {
@@ -96,8 +121,5 @@ public class TestlayerAmazon extends BaseAmazonClass{
 		driver.close();
 	}	
 	
-	
-	
-	
-	
+		
 }
