@@ -1,5 +1,7 @@
 package testLayerAmzn;
 
+import java.util.Properties;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -33,8 +35,8 @@ public class TestlayerAmazon extends BaseAmazonClass{
 	
 	@BeforeTest
 	public void enteremail() throws Exception  {
-		log.typeEmail("amandeepsingh10145@gmail.com");
-		log.typePassword("toMT0m!5");
+		log.typeEmail(prop.getProperty("email"));
+		log.typePassword(prop.getProperty("password"));
 	}
 	
 	
@@ -42,7 +44,7 @@ public class TestlayerAmazon extends BaseAmazonClass{
 	  POMYourAccount logg = new POMYourAccount(); logg.youraccount(); }
 	 
 	 
-	@Test(priority=1, groups="Your Account", enabled=true)
+	@Test(priority=1, groups="Your Account", enabled=false)
 	public void YourOrders() throws InterruptedException {
 		logg = new POMYourAccount();
 		logg.YourOrders();
@@ -53,7 +55,7 @@ public class TestlayerAmazon extends BaseAmazonClass{
 		Thread.sleep(2000);
 		logg.cancelledorders();
 	}
-	@Test(priority=2,groups="Your Account", enabled=true)
+	@Test(priority=2,groups="Your Account", enabled=false)
 	public void YourAddresses() throws InterruptedException {
 		logg = new POMYourAccount();
 		logg.youraddresses();
@@ -67,7 +69,7 @@ public class TestlayerAmazon extends BaseAmazonClass{
 		logg.otheropts();		
 		
 	}
-	@Test(priority=3, groups="Your Account", enabled= true)
+	@Test(priority=3, groups="Your Account", enabled= false)
 	public void LoginSecurity() throws InterruptedException {
 		logg = new POMYourAccount();
 		logg.loginsecurity();
@@ -105,8 +107,8 @@ public class TestlayerAmazon extends BaseAmazonClass{
 		cart.removecloseopen();
 		startup();
 		log= new POMlogin();
-		log.typeEmail("amandeepsingh10145@gmail.com");
-		log.typePassword("toMT0m!5");
+		log.typeEmail(prop.getProperty("email"));
+		log.typePassword(prop.getProperty("password"));
 		cart.opencart();
 		
 		

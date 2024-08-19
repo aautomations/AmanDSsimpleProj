@@ -1,111 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="6" passed="3" failed="2" skipped="0">
+<testng-results ignored="4" total="6" passed="0" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-11T01:14:14 EDT" name="Default suite" finished-at="2023-06-11T01:17:14 EDT" duration-ms="179880">
+  <suite started-at="2024-02-05T23:03:55 EST" name="Default suite" finished-at="2024-02-05T23:03:55 EST" duration-ms="28">
     <groups>
-      <group name="Your Account">
-        <method signature="TestlayerAmazon.LoginSecurity()[pri:3, instance:testLayerAmzn.TestlayerAmazon@59309333]" name="LoginSecurity" class="testLayerAmzn.TestlayerAmazon"/>
-        <method signature="TestlayerAmazon.YourAddresses()[pri:2, instance:testLayerAmzn.TestlayerAmazon@59309333]" name="YourAddresses" class="testLayerAmzn.TestlayerAmazon"/>
-        <method signature="TestlayerAmazon.YourOrders()[pri:1, instance:testLayerAmzn.TestlayerAmazon@59309333]" name="YourOrders" class="testLayerAmzn.TestlayerAmazon"/>
-      </group> <!-- Your Account -->
     </groups>
-    <test started-at="2023-06-11T01:14:14 EDT" name="Default test" finished-at="2023-06-11T01:17:14 EDT" duration-ms="179880">
+    <test started-at="2024-02-05T23:03:55 EST" name="Default test" finished-at="2024-02-05T23:03:55 EST" duration-ms="28">
       <class name="testLayerAmzn.TestlayerAmazon">
-        <test-method is-config="true" signature="initialsetup()[pri:0, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:14:12 EDT" name="initialsetup" finished-at="2023-06-11T01:14:14 EDT" duration-ms="2452" status="PASS">
+        <test-method is-config="true" signature="initialsetup()[pri:0, instance:testLayerAmzn.TestlayerAmazon@6379eb]" started-at="2024-02-05T23:03:54 EST" name="initialsetup" finished-at="2024-02-05T23:03:55 EST" duration-ms="606" status="FAIL">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line 
+Host info: host: 'DESKTOP-ECEQEH3', ip: '10.0.0.136'
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}], desiredCapabilities=Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line 
+Host info: host: 'DESKTOP-ECEQEH3', ip: '10.0.0.136'
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}], desiredCapabilities=Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:130)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:111)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:101)
+at AmazonBaseP.BaseAmazonClass.startup(BaseAmazonClass.java:38)
+at testLayerAmzn.TestlayerAmazon.initialsetup(TestlayerAmazon.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialsetup -->
-        <test-method is-config="true" signature="enteremail()[pri:0, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:14:14 EDT" name="enteremail" finished-at="2023-06-11T01:14:22 EDT" duration-ms="8345" status="PASS">
+        <test-method is-config="true" signature="enteremail()[pri:0, instance:testLayerAmzn.TestlayerAmazon@6379eb]" started-at="2024-02-05T23:03:55 EST" name="enteremail" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1707192235067" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enteremail -->
-        <test-method is-config="true" signature="yraccount()[pri:0, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:14:22 EDT" name="yraccount" finished-at="2023-06-11T01:14:25 EDT" duration-ms="2533" status="PASS">
+        <test-method is-config="true" signature="yraccount()[pri:0, instance:testLayerAmzn.TestlayerAmazon@6379eb]" started-at="2024-02-05T23:03:55 EST" name="yraccount" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1707192235083" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- yraccount -->
-        <test-method signature="YourOrders()[pri:1, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:14:25 EDT" name="YourOrders" finished-at="2023-06-11T01:14:42 EDT" duration-ms="17452" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- YourOrders -->
-        <test-method is-config="true" signature="yraccount()[pri:0, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:14:42 EDT" name="yraccount" finished-at="2023-06-11T01:14:45 EDT" duration-ms="2446" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- yraccount -->
-        <test-method signature="YourAddresses()[pri:2, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:14:45 EDT" name="YourAddresses" finished-at="2023-06-11T01:15:13 EDT" duration-ms="27727" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- YourAddresses -->
-        <test-method is-config="true" signature="yraccount()[pri:0, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:15:13 EDT" name="yraccount" finished-at="2023-06-11T01:15:15 EDT" duration-ms="2419" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- yraccount -->
-        <test-method signature="LoginSecurity()[pri:3, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:15:15 EDT" name="LoginSecurity" finished-at="2023-06-11T01:15:18 EDT" duration-ms="3179" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginSecurity -->
-        <test-method is-config="true" signature="yraccount()[pri:0, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:15:18 EDT" name="yraccount" finished-at="2023-06-11T01:15:21 EDT" duration-ms="2421" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- yraccount -->
-        <test-method signature="Search()[pri:5, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:15:21 EDT" name="Search" finished-at="2023-06-11T01:15:38 EDT" duration-ms="17757" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="Search()[pri:5, instance:testLayerAmzn.TestlayerAmazon@6379eb]" started-at="2024-02-05T23:03:55 EST" name="Search" finished-at="2024-02-05T23:03:55 EST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#a-autoid-4-announce > span.a-dropdown-prompt"}
-  (Session info: chrome=114.0.5735.110)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.6.0', revision: '79f1c02ae20'
+              <![CDATA[Could not start a new session. Response code 500. Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line 
+Host info: host: 'DESKTOP-ECEQEH3', ip: '10.0.0.136'
+Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [70ca3b9ffa55f29684d2a0e5674fcd73, findElement {using=css selector, value=#a-autoid-4-announce > span.a-dropdown-prompt}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\HARMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56551}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56551/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 70ca3b9ffa55f29684d2a0e5674fcd73]]>
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}], desiredCapabilities=Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#a-autoid-4-announce > span.a-dropdown-prompt"}
-  (Session info: chrome=114.0.5735.110)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.6.0', revision: '79f1c02ae20'
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line 
+Host info: host: 'DESKTOP-ECEQEH3', ip: '10.0.0.136'
+Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [70ca3b9ffa55f29684d2a0e5674fcd73, findElement {using=css selector, value=#a-autoid-4-announce > span.a-dropdown-prompt}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\HARMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56551}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56551/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 70ca3b9ffa55f29684d2a0e5674fcd73
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}], desiredCapabilities=Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-at amazonPOM.POMSearchFacility.sort(POMSearchFacility.java:67)
-at testLayerAmzn.TestlayerAmazon.Search(TestlayerAmazon.java:89)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:130)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:111)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:101)
+at AmazonBaseP.BaseAmazonClass.startup(BaseAmazonClass.java:38)
+at testLayerAmzn.TestlayerAmazon.initialsetup(TestlayerAmazon.java:32)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
 at org.testng.SuiteRunner.run(SuiteRunner.java:276)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
@@ -118,60 +119,52 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Search -->
-        <test-method is-config="true" signature="yraccount()[pri:0, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:15:38 EDT" name="yraccount" finished-at="2023-06-11T01:15:41 EDT" duration-ms="2479" status="PASS">
+        <test-method is-config="true" signature="yraccount()[pri:0, instance:testLayerAmzn.TestlayerAmazon@6379eb]" started-at="2024-02-05T23:03:55 EST" name="yraccount" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1707192235089" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- yraccount -->
-        <test-method signature="ShoppingCart()[pri:6, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:15:41 EDT" name="ShoppingCart" finished-at="2023-06-11T01:17:06 EDT" duration-ms="85680" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
+        <test-method signature="ShoppingCart()[pri:6, instance:testLayerAmzn.TestlayerAmazon@6379eb]" started-at="2024-02-05T23:03:55 EST" name="ShoppingCart" finished-at="2024-02-05T23:03:55 EST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.6.0', revision: '79f1c02ae20'
+              <![CDATA[Could not start a new session. Response code 500. Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line 
+Host info: host: 'DESKTOP-ECEQEH3', ip: '10.0.0.136'
+Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, findElement {using=id, value=nav-cart-text-container}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\HARMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56551}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56551/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}]]>
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}], desiredCapabilities=Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.6.0', revision: '79f1c02ae20'
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line 
+Host info: host: 'DESKTOP-ECEQEH3', ip: '10.0.0.136'
+Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, findElement {using=id, value=nav-cart-text-container}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\HARMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56551}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56551/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}], desiredCapabilities=Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-at amazonPOM.POMShoppingCart.opencart(POMShoppingCart.java:123)
-at testLayerAmzn.TestlayerAmazon.ShoppingCart(TestlayerAmazon.java:110)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:130)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:111)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:101)
+at AmazonBaseP.BaseAmazonClass.startup(BaseAmazonClass.java:38)
+at testLayerAmzn.TestlayerAmazon.initialsetup(TestlayerAmazon.java:32)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
 at org.testng.SuiteRunner.run(SuiteRunner.java:276)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
@@ -184,11 +177,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ShoppingCart -->
-        <test-method is-config="true" signature="close()[pri:0, instance:testLayerAmzn.TestlayerAmazon@59309333]" started-at="2023-06-11T01:17:06 EDT" name="close" finished-at="2023-06-11T01:17:14 EDT" duration-ms="7422" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:testLayerAmzn.TestlayerAmazon@6379eb]" started-at="2024-02-05T23:03:55 EST" name="close" finished-at="1969-12-31T19:00:00 EST" duration-ms="-1707192235092" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

@@ -23,42 +23,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Harmanjeet Kaur/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.6.0/selenium-chrome-driver-4.6.0.jar" sourcepath="C:/Users/Harmanjeet Kaur/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.6.0/selenium-chrome-driver-4.6.0-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
-			<attribute name="maven.artifactId" value="selenium-chrome-driver"/>
-			<attribute name="maven.version" value="4.6.0"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Harmanjeet Kaur/.m2/repository/org/seleniumhq/selenium/selenium-api/4.6.0/selenium-api-4.6.0.jar" sourcepath="C:/Users/Harmanjeet Kaur/.m2/repository/org/seleniumhq/selenium/selenium-api/4.6.0/selenium-api-4.6.0-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
-			<attribute name="maven.artifactId" value="selenium-api"/>
-			<attribute name="maven.version" value="4.6.0"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Harmanjeet Kaur/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.7.2/selenium-chrome-driver-4.7.2.jar" sourcepath="C:/Users/Harmanjeet Kaur/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.7.2/selenium-chrome-driver-4.7.2-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
-			<attribute name="maven.artifactId" value="selenium-chrome-driver"/>
-			<attribute name="maven.version" value="4.7.2"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Harmanjeet Kaur/.m2/repository/org/seleniumhq/selenium/selenium-support/4.1.2/selenium-support-4.1.2.jar" sourcepath="C:/Users/Harmanjeet Kaur/.m2/repository/org/seleniumhq/selenium/selenium-support/4.1.2/selenium-support-4.1.2-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
-			<attribute name="maven.artifactId" value="selenium-support"/>
-			<attribute name="maven.version" value="4.1.2"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Harmanjeet Kaur/.p2/pool/plugins/org.testng_7.4.0.r202105021533.jar" sourcepath="C:/Users/Harmanjeet Kaur/.p2/pool/plugins/org.testng.source_7.4.0.r202105021533.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
